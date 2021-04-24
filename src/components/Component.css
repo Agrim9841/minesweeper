@@ -1,0 +1,141 @@
+.board{
+  display: flex;
+  flex-direction: row;
+  background-color: #2196F3;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  height: 100vh;
+  box-sizing: border-box;
+}
+
+.board-info{
+  flex: 0.15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: yellow;
+  height: 100%;
+}
+
+.completediv{
+  text-align: center;
+  color: yellow;
+}
+.dig-btn, .flag-btn, .unflag-btn{
+  opacity: 0%;
+  height: 60%;
+  width: 30%;
+  background-color: rgba(0,0,0,0.5);
+  border-radius: 5px;
+  border: 1px solid #555;
+}
+
+.dig-btn{
+  background-image: url("spade.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.flag-btn{
+  background-image: url("flag.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.grid-container {
+  display: grid;
+  flex: 0.85;
+  height: 100%;
+  grid-template-columns: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  grid-template-rows: 10% 10% 10% 10% 10% 10% 10% 10% 10% 10%;
+  padding-left: 10px;
+}
+
+.grid-empty, .grid-flagged{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.grid-empty:hover .dig-btn{
+  opacity: 100%;
+}
+
+.grid-empty:hover .flag-btn{
+  opacity: 100%;
+}
+
+.grid-flagged{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("flag.png");
+}
+
+.grid-flagged:hover .unflag-btn{
+  opacity: 100%;
+}
+
+.grid-revealed{
+  box-shadow: inset 5px 5px 6px #777;
+  background: rgba(255, 255, 255, 1);
+}
+
+.grid-number{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2rem;
+  color: teal;
+}
+
+.grid-mine{
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("mine1.png");
+}
+
+.grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  border: 1px solid #555555;
+}
+
+.hero{
+  text-align: center;
+}
+
+.hero h1{
+  color: yellow;
+}
+
+.home{
+  height: 100vh;
+  width: 100%;
+  background-color: #2196F3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.start-btn{
+  display: inline-block;
+  background-color: yellow;
+  padding: 10px;
+  border: 1px solid #999;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.unflag-btn{
+  background-image: url("unflag.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
